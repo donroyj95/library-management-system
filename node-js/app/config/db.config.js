@@ -1,6 +1,5 @@
 module.exports = {
-  // Add the current host name from aws when your deploy and comment the localhost
-  // HOST: "ec2-52-62-22-184.ap-southeast-2.compute.amazonaws.com", 
+  // HOST: "ec2-52-62-22-184.ap-southeast-2.compute.amazonaws.com",
   HOST: "localhost",
   USER: "root",
   PASSWORD: "123456",

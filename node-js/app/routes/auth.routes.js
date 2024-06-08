@@ -19,6 +19,8 @@ module.exports = function(app) {
     controller.signup
   );
 
+  app.post("/api/auth/passwordreset", controller.passwordReset)
+
   app.post("/api/auth/signin", controller.signin);
 
   app.post("/api/auth/signout", controller.signout);
@@ -28,4 +30,5 @@ module.exports = function(app) {
   app.post("/api/auth/otp",controller.verifyOTP)
 
   app.post("/api/auth/passwordreset", controller.passwordReset)
+
 };

@@ -38,6 +38,21 @@ exports.signup = async (req, res) => {
   }
 };
 
+// exports.passwordReset = async (req, res) => {
+//   try {
+//     const user = await User.update({
+//       password: bcrypt.hashSync(req.body.password, 8),
+//     },
+//     {
+//       where: { username: req.body.username }
+//     }
+//   );
+
+//   } catch (error) {
+//     res.status(500).send({ message: error.message });
+//   }
+// }
+
 exports.verifyOTP = async(req,res)=>{
   try{
     if(req.body.otp ==='xyZl123'){
@@ -114,7 +129,6 @@ exports.signout = async (req, res) => {
 
 
 exports.passwordReset = async (req, res) => {
-  console.log('user',req.body.newPassword,req.body.username)
   try {
     const user = await User.update({
       password: bcrypt.hashSync(req.body.newPassword, 8),
@@ -122,23 +136,11 @@ exports.passwordReset = async (req, res) => {
     {
       where: { username: req.body.username }
     });
-    // const user1 = await User.findOne({where:{username:req.body.username}});
-  //    const user = await User.({
-  //         password: bcrypt.hashSync(req.body.newPassword, 8),
-  //         role:user1.role,
-  //         email:user1.email
-  //   },
-  //   {
-  //     where: { username: req.body.username }
-  //   }
-
-  // );
-  // console.log('user1',user.username)
 
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
-};
+}
 
 exports.reset = async (req,res)=>{
   try{
@@ -193,4 +195,4 @@ exports.reset = async (req,res)=>{
 
   }
 
-};
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/test/";
+const API_URL = "https://localhost:3000/api/test/";
 // const API_URL = "http://ec2-52-62-22-184.ap-southeast-2.compute.amazonaws.com:3000/api/test/"
 
 const getPublicContent = () => {
