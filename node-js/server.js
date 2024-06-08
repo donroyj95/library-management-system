@@ -5,13 +5,6 @@ const cookieSession = require("cookie-session");
 const app = express();
 
 app.use(cors());
-/* for Angular Client (withCredentials) */
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: ["http://localhost:8081"],
-//   })
-// );
 
 // parse requests of content-type - application/json
 app.use(express.json());
@@ -54,7 +47,8 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-// initial()  // initial at first time to create roles for the db
+// initial at first time to create roles for the db
+// initial()  
 
 function initial() {
   Role.create({

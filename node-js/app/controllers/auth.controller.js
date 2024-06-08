@@ -133,7 +133,7 @@ exports.passwordReset = async (req, res) => {
   //   }
 
   // );
-  console.log('user1',user.username)
+  // console.log('user1',user.username)
 
   } catch (error) {
     res.status(500).send({ message: error.message });
